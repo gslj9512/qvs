@@ -1,0 +1,21 @@
+{
+  "name": "qiniu/qvs",
+  "description": "qiniu qvs web api",
+  "require": {
+    "guzzlehttp/guzzle": "^7.3",
+    "ext-json": "*"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Qvs\\Src\\": "src/",
+      "Qvs\\Tools\\": "tools/"
+    }
+  },
+  "authors": [
+    {
+      "name": "郭帅",
+      "email": "guoshuai@bangtech.cn"
+    }
+  ]
+}
