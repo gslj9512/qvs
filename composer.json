@@ -1,5 +1,5 @@
 {
-  "name": "hdb/qiniuqvs",
+  "name": "bangtechgs/qiniuqvs",
   "description": "qiniu qvs web api",
   "require": {
     "guzzlehttp/guzzle": "^7.3",
