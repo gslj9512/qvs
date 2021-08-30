@@ -38,8 +38,8 @@ abstract class ApiBase
     {
         $url_array = parse_url($url);
         $data = "$method {$url_array['path']}";
-        if (isset($url['query'])) {
-            $data .= "?{$url_array['query']}";
+        if (isset($url_array['query'])) {
+            $data .= '?' . $url_array['query'];;
         }
         $data .= "\nHost: {$url_array['host']}";
         if (!empty($body_param)) {
@@ -65,15 +65,15 @@ abstract class ApiBase
         $headers['Authorization'] = $authorization;
         $client = new \GuzzleHttp\Client();
         $request_data = [
-            'headers'=>$headers
+            'headers' => $headers
         ];
-        if($data){
+        if ($data) {
             $request_data['json'] = $data;
         }
         try {
             $resp = $client->request($method, $url, $request_data);
             $content = $resp->getBody()->getContents();
-            return true;
+            return json_decode($content, true);
         } catch (GuzzleException $e) {
             return false;
         }
