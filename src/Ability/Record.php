@@ -9,7 +9,7 @@ class Record extends ApiBase
 {
     const STARTURL = "/v1/namespaces/{namespaceId}/streams/{streamId}/record/start";
     const STOPURL = "/v1/namespaces/{namespaceId}/streams/{streamId}/record/stop";
-    const RECORDHISURL = "/v1/namespaces/{namespaceId}/streams/{streamId}/recordhistories?start={start}&end={end}&marker={marker}&line={line}";
+    const RECORDHISURL = "/v1/namespaces/{namespaceId}/streams/{streamId}/recordhistories?start={start}&end={end}&marker={marker}&line={line}&format={format}";
     const SAVESURL = "/v1/namespaces/{namespaceId}/streams/{streamId}/saveas";
     const PLAYBACKURL = "/v1/namespaces/{namespaceId}/streams/{streamId}/records/playback.m3u8?start={start}&end={end}";
     const SNAPURL = "/v1/namespaces/{namespaceId}/streams/{streamId}/snap";
